@@ -9,7 +9,7 @@ def on_message(ws, message):
     json_message = json.loads(message)
     if(json_message["messageType"]=="candy_release"):
         ser = serial.Serial('COM7', 9800, timeout=1)
-        for i in range(6):
+        for i in range(2):
             time.sleep(0.5)
             ser.write(b'L')   # send the byte string 'H'
             print("writing byte")

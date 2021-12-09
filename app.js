@@ -41,7 +41,7 @@ wss.on('connection', (ws) => {
         var parsedMessage = JSON.parse(message);
         } catch(e){
             const response = {
-                messageType: 'UFHH',
+                messageType: 'websocked message could not be parsed',
                 roomCode: 'noRoom',
                 method: "big_ufh"    
             }
